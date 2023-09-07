@@ -18,3 +18,7 @@ To remove ugly scrolls inside divs, use this css tool: .{className}::-webkit-scr
 export {YourContextNameProvider, YourContextName}
 ```
 src/contexts/CitiesContext.jsx
+
+### 🌐 Leaflet 
+to use Leaflet for MAP and LOCATIONS use react-leaflet library, copy <Mapcontainer> jsx and import css link from starting files of Leaflet. create state for map position:
+const [mapPosition, setMapPosition] = useState([40, 0]) (any desirable coordinates)
