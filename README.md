@@ -8,6 +8,7 @@ To remove ugly scrolls inside divs, use this css tool: .{className}::-webkit-scr
 
 ### 🎣 useCustomContext hook
  to use/consume context values in any component: 
+ create this function at the end of  createContext() file
  ```
  function useYourContextName(){
 const contextValue = useContext(YourContextName)
@@ -15,3 +16,4 @@ if (contextValue ===undefined) throw new Error('YourContextName was used outside
 return contextValue}
 export {YourContextNameProvider, YourContextName}
 ```
+src/contexts/CitiesContext.jsx
