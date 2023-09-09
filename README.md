@@ -1,8 +1,24 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+#### ➰ Special features and notes to mention:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ➖ Remove scrolls
+To remove ugly scrolls inside divs, use this css tool: .{className}::-webkit-scrollbar {   display: none;   scroll-behavior: smooth; }
+
+### 🎣 useCustomContext hook
+ to use/consume context values in any component: 
+ create this function at the end of  createContext() file
+ ```
+ function useYourContextName(){
+  const contextValue = useContext(YourContextName)
+  if (contextValue ===undefined) throw new Error('YourContextName was used outside of YourContextName Provider')
+  return contextValue
+}
+export {YourContextNameProvider, YourContextName}
+```
+src/contexts/CitiesContext.jsx
+
+### 🌐 Leaflet 
+to use Leaflet for MAP and LOCATIONS use react-leaflet library, copy <Mapcontainer> jsx and import css link from starting files of Leaflet. create state for map position:
+const [mapPosition, setMapPosition] = useState([40, 0]) (any desirable coordinates)
