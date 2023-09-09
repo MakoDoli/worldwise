@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import CityItem from "./CityItem";
+
 import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
