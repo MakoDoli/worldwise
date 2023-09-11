@@ -27,4 +27,5 @@ const [mapPosition, setMapPosition] = useState([40, 0]) (any desirable coordinat
 ### 📆 Date-picker library
 
 run npm i react-datepicker, import css link from documentation, use <DatePicker /> jsx with 
-onChange and selected props to set and store date state - const [date, setDate] = useState(new Date())
+'onChange' and 'selected' props to set and store date state - const [date, setDate] = useState(new Date()),
+also 'dateFormat' attribute to format date- "dd/MM/yyy"
