@@ -36,6 +36,50 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${URL}`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      setCities((cities) => [...cities, data]);
+    } catch {
+      alert("Something went wrong");
+    } finally {
+      setIsLoading(false);
+    }
+
+    // axios
+    //   .post(URL, newCity)
+    //   .then((response) => {
+    //     if (response.status === 201) {
+    //       setCities((cities) => [...cities, response]);
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  }
+
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+      await fetch(`${URL}/${id}`, {
+        method: "DELETE",
+      });
+
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch {
+      alert("Something went wrong");
+    } finally {
+      setIsLoading(false);
+    }
+  }
   return (
     <CitiesContext.Provider
       value={{
@@ -43,6 +87,8 @@ function CitiesProvider({ children }) {
         isLoading: isLoading,
         currentCity: currentCity,
         getCity,
+        createCity,
+        deleteCity,
       }}
     >
       {children}

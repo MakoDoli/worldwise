@@ -35,6 +35,30 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Villafranca del Cid",
+      "country": "Spain",
+      "countryEmoji": "🇪🇸",
+      "date": "2023-09-11T10:06:21.443Z",
+      "position": {
+        "lat": "40.444856858961764",
+        "lng": "-0.2032470703125"
+      },
+      "notes": "never been there",
+      "id": 98443198
+    },
+    {
+      "cityName": "Fortanete",
+      "country": "Spain",
+      "countryEmoji": "🇪🇸",
+      "date": "2023-09-11T10:20:53.365Z",
+      "position": {
+        "lat": "40.457397087754444",
+        "lng": "-0.5465698242187501"
+      },
+      "notes": "",
+      "id": 98443199
     }
   ]
 }
