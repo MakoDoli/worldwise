@@ -20,5 +20,35 @@ export {YourContextNameProvider, YourContextName}
 src/contexts/CitiesContext.jsx
 
 ### 🌐 Leaflet 
-to use Leaflet for MAP and LOCATIONS use react-leaflet library, copy <Mapcontainer> jsx and import css link from starting files of Leaflet. create state for map position:
+to use Leaflet for MAP and LOCATIONS use react-leaflet library, copy <Mapcontainer> jsx and import css link from starting files of Leaflet.
+create state for map position:
 const [mapPosition, setMapPosition] = useState([40, 0]) (any desirable coordinates)
+
+### 📆 Date-picker library
+
+run npm i react-datepicker, import css link from documentation, use <DatePicker /> jsx with 
+'onChange' and 'selected' props to set and store date state - const [date, setDate] = useState(new Date()),
+also 'dateFormat' attribute to format date- "dd/MM/yyy"
+
+### {} Post/send data to server with fetch()
+
+```
+async function createNewData(newObject) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${URL}`, {
+        method: "POST",
+        body: JSON.stringify(newObject),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log(data)
+    } catch {
+      alert("Something went wrong");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+```
