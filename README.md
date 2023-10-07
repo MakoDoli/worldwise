@@ -52,3 +52,5 @@ async function createNewData(newObject) {
     }
   }
 ```
+### 🐌 Lazyloading and Suspense api
+<Suspense> Suspense api with fallback displays fallback compomnent untill its children components load. Children components must be imported lazily :D const child = lazy(() => import("./pathto/child"))
